@@ -1,13 +1,9 @@
-import ModalComponent from '@/components/modals/ModalComponent'
-import Testing from '@/components/Testing'
+import UserFormGeneralData from '@/components/forms/UserFormGeneralData'
+import ExpandableSectionComponent from '@/components/selection/UserFormGeneralData'
 import GeneralLayout from '@/layouts/GeneralLayout'
 import React from 'react'
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import { UserFormGeneralData } from '@/components/forms/UserFormGeneralData';
-import ExpandableSectionComponent from '@/components/selection/UserFormGeneralData';
 
-export const FormPage = () => {
+export const TaskPage = () => {
   return (
     <>
       <GeneralLayout>
@@ -27,4 +23,4 @@ export const FormPage = () => {
     </>
   )
 }
-export default FormPage
+export default TaskPage

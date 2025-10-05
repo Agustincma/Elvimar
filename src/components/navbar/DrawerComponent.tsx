@@ -7,6 +7,7 @@ import { mockGeneralClientData } from '../../services/mocks/ClientMocks';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 export const DrawerComponent = () => {
   const router = useRouter();
@@ -15,7 +16,7 @@ export const DrawerComponent = () => {
     <Box
       sx={{
         width: 250,
-        backgroundColor: '#9c9c9c',
+        backgroundColor: 'rgba(44, 44, 44, 0.2)',
         height: '90vh',
         borderRadius: '28px',
         display: 'flex',
@@ -101,6 +102,26 @@ export const DrawerComponent = () => {
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="Formularios" primaryTypographyProps={{ fontWeight: 500 }} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding sx={{ mb: 1 }}>
+          <ListItemButton
+            onClick={() => router.push('/task')}
+            sx={{
+              borderRadius: 2,
+              px: 2,
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#fbc02d',
+                color: '#000',
+                transform: 'scale(1.03)',
+              },
+            }}
+          >
+            <ListItemIcon sx={{ color: 'inherit', minWidth: 40 }}>
+              <TaskAltIcon />
+            </ListItemIcon>
+            <ListItemText primary="Tareas" primaryTypographyProps={{ fontWeight: 500 }} />
           </ListItemButton>
         </ListItem>
       </List>

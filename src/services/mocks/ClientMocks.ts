@@ -25,7 +25,7 @@ export const mockGeneralClientData: GeneralClientData = {
     birthDate: '1990-05-15',
     maritalStatus: 'Single',
     hasDisability: false,
-    clientFlag: 'A person with family problems',
+    clientFlag: 'Lorem Ipsum is simply dummy text of the printing',
     label: 'Datos Generales del Cliente'
 };
 
