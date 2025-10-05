@@ -23,7 +23,7 @@ export const UserClientFullDataComponent: React.FC<{ data?: Partial<Client> }> =
   }
 
   return (
-    <Card sx={{ width: "auto", maxWidth: '100%', mb: 1, borderRadius: '28px', padding: 2, backgroundColor: '#1e1e1e', color: '#fff' }}>
+    <Card sx={{ width: "auto", mb: 1, borderRadius: '28px', padding: 2, backgroundColor: '#1e1e1e', color: '#fff' }}>
       <CardContent sx={{ textAlign: 'start' }}>
         {Object.entries(data).map(([key, value]) => {
           if (!value) return null

@@ -16,7 +16,6 @@ const UserLayout = () => {
         p: 1,
         gap: 1,
         boxSizing: 'border-box',
-        overflowX: 'hidden', // evita scroll horizontal global
       }}
     >
       {/* Columna derecha (cards) */}
@@ -29,7 +28,6 @@ const UserLayout = () => {
           flexShrink: 0,
         }}
       >
-        <UserCardComponent />
         <UserCardComponent />
         <UserCardComponent />
       </Box>
@@ -60,8 +58,6 @@ const UserLayout = () => {
             gap: 1,
             overflowY: 'auto',
             pr: 1,
-            width: '100%',
-            maxWidth: '100%',
           }}
         >
           {mockObservations.map((obs, index) => (

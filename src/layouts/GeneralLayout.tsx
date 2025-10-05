@@ -1,9 +1,12 @@
-import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Typography } from '@mui/material';
+import React, { ReactNode } from 'react';
 import DrawerComponent from '../components/navbar/DrawerComponent';
-import UserLayout from '@/layouts/UserLayout';
 
-export const GeneralLayout = () => {
+interface Props {
+  children: ReactNode; // permite pasar cualquier JSX o componente
+}
+
+export const GeneralLayout: React.FC<Props> = ({ children }) => {
   return (
     <Box
       sx={{
@@ -31,18 +34,22 @@ export const GeneralLayout = () => {
       <Box
         sx={{
           flexGrow: 1,
-          ml: '250px',
+          ml: '270px', // deja espacio para el Drawer
           height: '100vh',
           overflowY: 'auto',
           p: 2,
           bgcolor: 'background.default',
-          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
         }}
       >
-        <Typography variant='h2'>User Information</Typography>
-        <UserLayout />
+        <Typography variant="h2" sx={{ mb: 2 }}>
+          User Information
+        </Typography>
+        {children}
       </Box>
     </Box>
   );

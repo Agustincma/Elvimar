@@ -9,7 +9,9 @@ export default function Home() {
     <div>
       {/* <UserLayout/> */}
       {/* <DrawerComponent/> */}
-      <GeneralLayout/>
+    <GeneralLayout>
+      <UserLayout />
+    </GeneralLayout>
 
     </div>
   );
